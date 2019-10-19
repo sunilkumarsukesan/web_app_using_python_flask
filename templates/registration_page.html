@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration page</title>
+    <link href = {{url_for('static',filename='style.css')}} , rel = "stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="jumbotron">
+    <h1 class="display-4">Registration</h1>
+</div>
+<div class = "container">
+    <h3>Enter the required details </h3><br>
+    <form  class="border" class="form-horizontal" method="POST" action="/register">
+        <div>
+            <!--name-->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for ="Name">Enter Name : </label>
+                <div class="col-sm-7">
+                    <input class="form-control" id="Name" name ="name">
+                </div>
+            </div>
+            <!--username-->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for ="username">Enter username : </label>
+                <div class="col-sm-7">
+                    <input class="form-control" id="username" name ="username">
+                </div>
+            </div>
+            <!-- email-->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for ="Name">Enter email : </label>
+                <div class="col-sm-7">
+                    <input class="form-control" id="email" name ="email">
+                </div>
+            </div>
+            <!--phonenumber-->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="PhoneNumber">Enter PhoneNumber : </label>
+                <div class="col-sm-7">
+                    <input class="form-control" id="phonenumber" name ="phonenumber">
+                </div>
+                </label>
+            </div>
+            <!--Country-->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="country">Select Country : </label>
+                <div class="col-sm-7">
+                    <select id="country" class="form-control" name="country">
+                        <option value=></option>
+                        <option value="Australia">Australia</option>
+                        <option value="Canada">Canada</option>
+                        <option value="India">India</option>
+                        <option value="UK">United Kingdom</option>
+                        <option value="USA">United states</option>
+                    </select>
+                </div>
+            </div>
+            <!--State-->
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="State">Select state : </label>
+                <div class="col-sm-7">
+                    <select id="State" class="form-control" name="state">
+                        <option value=></option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-7">
+                    <input class="btn btn-secondary" id="Register" type="submit">
+                </div>
+            </div>
+        </div>
+        <br>
+    </form>
+</div>
+</body>
+</html>
